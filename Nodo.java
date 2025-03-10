@@ -9,5 +9,31 @@ package consultorio;
  * @author USUARIO
  */
 public class Nodo {
+
+    private Paciente dato;
+    private Nodo Next;
+
+
+
+    public Nodo (Paciente Dat, Nodo sig){
+        dato = Dat;
+        Next = sig;
+    }
+    
+    public Paciente getDato(){
+        return dato;
+    }
+    
+    public Nodo getSig(){
+        return Next;
+    }
+    
+    public void setDato(Paciente element){
+        dato = element;
+    }
+    
+    public void setNext(Nodo sig){
+        Next = sig;
+}
     
 }
