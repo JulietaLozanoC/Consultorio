@@ -34,4 +34,32 @@ primer dato en entrar es el primero en salir)*/
         }
         return Num_Pacientes;
     }
+
+//Método para eliminar uno de los “Pacientes” de la lista por su número de cedula
+    public void borrar(int Dat) {
+        if (primero == null) {
+            System.out.println("La lista esta vacia.");
+        } else if (primero.getCedula() == Dat) {
+            primero = primero.getSig();
+        } else {
+            Nodo actual = primero;
+            while (actual.getSig() != null && actual.getSig().getCedula() != Dat) {
+                actual = actual.getSig();
+            }
+            if (actual.getSig() == null) {
+                System.out.println("El paciente de cedula " + Dat + " no esta en la lista.");
+            } else {
+                actual.setNext(actual.getSig().getSig());
+            }
+        }
+    }
+
+//Método para imprimir toda la información de los “Pacientes” registrados en los nodos almacenados
+    public void MostarLista() {
+        Nodo actual = primero;
+        while (actual != null) {
+            System.out.println(actual.toString());
+            actual = actual.getSig();
+        }
+    }
 }
