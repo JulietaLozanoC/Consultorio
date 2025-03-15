@@ -47,4 +47,10 @@ public class Nodo {
     public void setNext(Nodo sig) {
         Next = sig;
     }
+
+//Implementación de método en los nodos que nos permitirá imprimir la información del objeto “Paciente” con más facilidad
+    @Override
+    public String toString() {
+        return "\nNombre: " + nombre + "\nCedula: " + cedula + "\nEdad: " + edad;
+    }
 }
