@@ -25,5 +25,16 @@ información al sistema tienda al infinito*/
             int Age = Integer.parseInt(Tec.next());
             Consultas_de_hoy.Insertar_Nuevo_Nodo(Name, Ced, Age);
         }
+
+//Funciones puestas a prueba para comprobar el estado de los nodos
+        System.out.println("\nHay " + Consultas_de_hoy.ContarElementos() + " pacientes en espera.");
+        System.out.println("\n------ Mostar la lista de pacientes: ---------");
+        Consultas_de_hoy.MostarLista();
+        System.out.print("\nDigite la cedula del paciente a borrar de la lista:");
+        Num_New_Pacient = Tec.nextInt();
+        Consultas_de_hoy.borrar(Num_New_Pacient);
+        System.out.println("\nLa lista contiene ahora " + Consultas_de_hoy.ContarElementos() + " pacientes.");
+        System.out.println("\n------ Lista despues de Borrar al paciente: ---------");
+        Consultas_de_hoy.MostarLista();
     }
 }
