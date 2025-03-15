@@ -1,39 +1,40 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package consultorio;
 
-/**
- *
- * @author USUARIO
- */
 public class Nodo {
-
-    private Paciente dato;
+    
+//Creación de los atributos principales del objeto “Paciente”, dichos objetos serán almacenados en las celdas de los nodos correspondientes
+    private String nombre;
+    private int cedula;
     private Nodo Next;
 
-
-
-    public Nodo (Paciente Dat, Nodo sig){
-        dato = Dat;
-        Next = sig;
+//A continuación, se generan los “get” y “set” que nos permitirán manipular y trabajar con la información de los objetos “Paciente” almacenados en sus respectivos nodos
+    public Nodo(String nombre, int cedula, Nodo Next) {
+        this.nombre = nombre;
+        this.cedula = cedula;
+        this.Next = Next;
     }
-    
-    public Paciente getDato(){
-        return dato;
+
+    public String getNombre() {
+        return nombre;
     }
-    
-    public Nodo getSig(){
+
+    public int getCedula() {
+        return cedula;
+    }
+
+    public Nodo getSig() {
         return Next;
     }
-    
-    public void setDato(Paciente element){
-        dato = element;
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-    
-    public void setNext(Nodo sig){
+
+    public void setCedula(int cedula) {
+        this.cedula = cedula;
+    }
+
+    public void setNext(Nodo sig) {
         Next = sig;
-}
-    
+    }
 }
