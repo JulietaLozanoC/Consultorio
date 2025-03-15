@@ -23,4 +23,15 @@ primer dato en entrar es el primero en salir)*/
             actual.setNext(nuevo);
         }
     }
+
+//Método que realiza un conteo de los objetos “Paciente” almacenados en los nodos disponibles
+    public int ContarElementos() {
+        int Num_Pacientes = 0;
+        Nodo actual = primero;
+        while (actual != null) {
+            Num_Pacientes++;
+            actual = actual.getSig();
+        }
+        return Num_Pacientes;
+    }
 }
